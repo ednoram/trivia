@@ -14,6 +14,7 @@ declare module 'styled-components' {
         black: string;
         white: string;
         lightRed: string;
+        darkGray: string;
         lightGray: string;
       };
       primary: IPalette;

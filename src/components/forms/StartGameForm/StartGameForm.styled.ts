@@ -42,4 +42,10 @@ export const PlayButton = styled(Button)`
   box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightRed};
   margin-top: 80px;
   padding: 22px 32px;
+
+  :disabled {
+    color: ${({ theme }) => theme.palette.common.darkGray};
+    background: ${({ theme }) => theme.palette.common.white};
+    box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightGray};
+  }
 `;

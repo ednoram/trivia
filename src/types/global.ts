@@ -7,3 +7,8 @@ export enum DifficultyLevels {
   Medium = 'medium',
   Hard = 'hard',
 }
+
+export enum AnswerOptions {
+  True = 'True',
+  False = 'False',
+}
