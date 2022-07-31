@@ -1,6 +1,7 @@
 import React from 'react';
-import { DropdownSelect, Input } from 'src/components/shared';
-import { DifficultyLevels } from 'src/types';
+
+import { DropdownSelect, Input } from '~/components/shared';
+import { DifficultyLevels } from '~/types';
 
 import * as S from './StartGameForm.styled';
 

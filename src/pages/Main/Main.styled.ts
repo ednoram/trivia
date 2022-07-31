@@ -1,5 +1,6 @@
-import { Logo } from 'src/assets';
 import styled from 'styled-components';
+
+import { Logo } from '~/assets';
 
 export const Container = styled.div`
   position: fixed;

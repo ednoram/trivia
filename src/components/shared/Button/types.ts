@@ -1,4 +1,4 @@
-import { DefaultChildrenType } from 'src/types';
+import { DefaultChildrenType } from '~/types';
 
 export enum ButtonTypeEnum {
   Submit = 'submit',

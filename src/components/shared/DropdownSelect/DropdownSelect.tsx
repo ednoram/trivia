@@ -1,6 +1,7 @@
 import React from 'react';
 import { useToggle } from 'react-use';
-import { useOutsideClick } from 'src/hooks';
+
+import { useOutsideClick } from '~/hooks';
 
 import * as S from './DropdownSelect.styled';
 import { DropdownSelectProps } from './types';

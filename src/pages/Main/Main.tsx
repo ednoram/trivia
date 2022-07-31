@@ -1,5 +1,6 @@
 import React from 'react';
-import { StartGameForm } from 'src/components';
+
+import { StartGameForm } from '~/components';
 
 import * as S from './Main.styled';
 

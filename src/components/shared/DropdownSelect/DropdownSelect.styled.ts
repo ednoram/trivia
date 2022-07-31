@@ -1,5 +1,6 @@
-import { DropdownArrow } from 'src/assets';
 import styled from 'styled-components';
+
+import { DropdownArrow } from '~/assets';
 
 export const Wrapper = styled.div`
   position: relative;

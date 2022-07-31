@@ -1,6 +1,7 @@
-import { CoinIcon, TrophyIcon } from 'src/assets';
-import { Button } from 'src/components/shared';
 import styled from 'styled-components';
+
+import { CoinIcon, TrophyIcon } from '~/assets';
+import { Button } from '~/components/shared';
 
 export const Form = styled.form`
   max-width: 442px;
