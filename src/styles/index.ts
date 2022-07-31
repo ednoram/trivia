@@ -1,1 +1,2 @@
-export { GlobalStyle } from './global.styled';
+export * from './global.styled';
+export * from './theme';

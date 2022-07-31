@@ -1,5 +1,13 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-const App: React.FC = () => <div>APP</div>;
+import { GlobalStyle, theme } from '~/styles';
+
+const App: React.FC = () => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <div>APP</div>
+  </ThemeProvider>
+);
 
 export default App;
