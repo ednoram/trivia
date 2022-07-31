@@ -1,13 +1,14 @@
 import { DefaultTheme } from 'styled-components';
 
 export const theme: DefaultTheme = {
-  borderRadius: '10px',
+  borderRadius: '14px',
   gradient: 'linear-gradient(90deg, #FFA67A 0%, #FF6065 100%)',
   palette: {
     common: {
       white: '#FFFFFF',
       black: '#000000',
-      lightGray: '#EEEEEE',
+      lightRed: '#C65252',
+      lightGray: '#DBDEFF',
     },
     primary: {
       main: '#424A9E',

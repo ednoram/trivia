@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { DropdownSelect, Input } from '~/components/shared';
+import { Paths } from '~/constants';
 import { DifficultyLevels } from '~/types';
 
 import * as S from './StartGameForm.styled';
@@ -11,8 +13,15 @@ const StartGameForm: React.FC = () => {
   const [amount, setAmount] = React.useState<number>(10);
   const [difficulty, setDifficulty] = React.useState<DifficultyLevels>(DifficultyLevels.Medium);
 
+  const navigate = useNavigate();
+
+  const handleSubmit = (event: React.FormEvent): void => {
+    event.preventDefault();
+    navigate(Paths.Game);
+  };
+
   return (
-    <S.Form>
+    <S.Form onSubmit={handleSubmit}>
       <S.Label htmlFor="difficulty">
         <S.Trophy />
         Difficulty
@@ -33,7 +42,7 @@ const StartGameForm: React.FC = () => {
           onChange={(value) => setAmount(Number(value))}
         />
       </S.AmountInputWrapper>
-      <S.PlayButton>Play</S.PlayButton>
+      <S.PlayButton submit>Play</S.PlayButton>
     </S.Form>
   );
 };

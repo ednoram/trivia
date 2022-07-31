@@ -39,6 +39,7 @@ export const PlayButton = styled(Button)`
   color: ${({ theme }) => theme.palette.common.white};
   background: ${({ theme }) => theme.gradient};
   border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightRed};
   margin-top: 80px;
   padding: 22px 32px;
 `;

@@ -16,7 +16,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0 120px;
+  padding: 100px 0 150px;
 `;
 
 export const Title = styled.h1`
