@@ -7,10 +7,13 @@ interface IPalette {
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    gradient: string;
+    borderRadius: string;
     palette: {
       common: {
         black: string;
         white: string;
+        lightGray: string;
       };
       primary: IPalette;
       secondary: IPalette;

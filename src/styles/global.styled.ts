@@ -4,9 +4,15 @@ export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    outline: none;
+    box-sizing: border-box;
   }
 
   body {
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    font-family: "Quicksand";
+  }
+
+  button {
+    cursor: pointer;
   }
 `;
