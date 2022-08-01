@@ -10,13 +10,15 @@ export const theme: DefaultTheme = {
       lightRed: '#C65252',
       darkGray: '#333333',
       lightGray: '#DBDEFF',
+      lightPink: '#FFDBDB',
+      lightOrange: '#F7A491',
     },
     primary: {
       main: '#424A9E',
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#F7A491',
+      main: '#FF7878',
       contrastText: '#FFFFFF',
     },
   },

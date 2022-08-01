@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 
 import { Logo } from '~/assets';
+import { coloredBackgroundStyles } from '~/styles';
 
 export const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  background-color: ${({ theme }) => theme.palette.primary.main};
+  ${coloredBackgroundStyles}
 `;
 
 export const Content = styled.div`

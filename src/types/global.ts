@@ -16,4 +16,5 @@ export enum AnswerOptions {
 export type Answer = {
   answer: AnswerOptions;
   questionIndex: number;
+  isCorrect: boolean;
 };

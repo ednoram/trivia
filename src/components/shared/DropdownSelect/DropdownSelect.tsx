@@ -3,6 +3,7 @@ import { useToggle } from 'react-use';
 
 import { useOutsideClick } from '~/hooks';
 
+import { DropdownOption } from './DropdownOption';
 import * as S from './DropdownSelect.styled';
 import { DropdownSelectProps } from './types';
 
@@ -17,18 +18,14 @@ const DropdownSelect: React.FC<DropdownSelectProps> = ({
 
   const optionItems = React.useMemo(
     () =>
-      options.map((option) => {
-        const handleClick = (): void => {
-          toggleIsOpen();
-          setSelectedOption(option);
-        };
-
-        return (
-          <S.Option key={option} onClick={handleClick}>
-            {option}
-          </S.Option>
-        );
-      }),
+      options.map((option) => (
+        <DropdownOption
+          key={option}
+          option={option}
+          toggleIsOpen={toggleIsOpen}
+          setSelectedOption={setSelectedOption}
+        />
+      )),
     [options, setSelectedOption, toggleIsOpen]
   );
 

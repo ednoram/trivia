@@ -15,7 +15,7 @@ export const Label = styled.label`
   font-weight: 700;
   font-size: 15px;
   line-height: 151.9%;
-  color: ${({ theme }) => theme.palette.secondary.main};
+  color: ${({ theme }) => theme.palette.common.lightOrange};
   margin-bottom: 8px;
 `;
 

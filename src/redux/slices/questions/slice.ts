@@ -4,6 +4,7 @@ import { Answer, IQuestion } from '~/types';
 
 import { ReducerNames } from '../../types';
 import * as questionsThunks from './thunks';
+import { AnswerPayload } from './types';
 
 type QuestionsState = {
   answers: Answer[];
@@ -21,9 +22,14 @@ const questionsSlice = createSlice({
   name: ReducerNames.Questions,
   initialState,
   reducers: {
-    answerQuestion(state: QuestionsState, { payload }: { payload: Answer }) {
-      state.answers.push(payload);
+    answerQuestion(state: QuestionsState, { payload }: { payload: AnswerPayload }) {
+      const question = state.questions[payload.questionIndex];
+      const isAnswerCorrect = question?.correct_answer === payload.answer;
+      state.answers.push({ ...payload, isCorrect: isAnswerCorrect });
       state.currentQuestionIndex++;
+    },
+    resetQuestionsState() {
+      return initialState;
     },
   },
   extraReducers: {
