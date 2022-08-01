@@ -54,9 +54,9 @@ export const ProgressBar = styled.div`
   background-color: ${({ theme }) => theme.palette.common.lightGray};
 `;
 
-export const ProgressBarFilled = styled.div`
+export const ProgressBarFilled = styled.div<{ $progress: number }>`
   height: 100%;
-  width: 30%;
+  width: ${({ $progress }) => $progress * 100}%;
   background-color: ${({ theme }) => theme.palette.secondary.main};
 `;
 

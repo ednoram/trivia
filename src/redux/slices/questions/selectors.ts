@@ -5,3 +5,8 @@ import { RootState } from '../../types';
 export const selectQuestionsState = (state: RootState) => state.questions;
 
 export const selectQuestions = createSelector(selectQuestionsState, (state) => state.questions);
+
+export const selectCurrentQuestionIndex = createSelector(
+  selectQuestionsState,
+  (state) => state.currentQuestionIndex
+);
