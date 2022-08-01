@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { CoinIcon, TrophyIcon } from '~/assets';
 import { Button } from '~/components/shared';
+import { Breakpoints } from '~/constants';
 
 export const Form = styled.form`
   max-width: 442px;
@@ -47,5 +48,9 @@ export const PlayButton = styled(Button)`
     color: ${({ theme }) => theme.palette.common.darkGray};
     background: ${({ theme }) => theme.palette.common.white};
     box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightGray};
+  }
+
+  @media (max-width: ${Breakpoints.TabledSmall}) {
+    margin-top: 60px;
   }
 `;

@@ -2,21 +2,18 @@ import styled, { css } from 'styled-components';
 
 import { StarIcon, XIcon } from '~/assets';
 import { Button } from '~/components';
-import { coloredBackgroundStyles } from '~/styles';
+import { Breakpoints } from '~/constants';
+import { coloredBackgroundStyles, pageContentStyles } from '~/styles';
 
 export const Container = styled.div`
   ${coloredBackgroundStyles}
 `;
 
 export const Content = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 768px;
+  ${pageContentStyles}
+  max-width: 820px;
   width: 100%;
   margin-inline: auto;
-  padding: 100px 0 150px;
 `;
 
 export const Score = styled.div`
@@ -88,12 +85,16 @@ export const PlayAgain = styled(Button)`
 export const CloseIcon = styled(XIcon)`
   position: absolute;
   top: 112px;
-  right: 0;
+  right: 20px;
   width: 25px;
   height: 25px;
   cursor: pointer;
 
   path {
     fill: ${({ theme }) => theme.palette.primary.contrastText};
+  }
+
+  @media (max-width: ${Breakpoints.TabledSmall}) {
+    top: 44px;
   }
 `;
