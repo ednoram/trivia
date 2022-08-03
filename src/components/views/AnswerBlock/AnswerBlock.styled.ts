@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div<{ $isCorrect: boolean }>`
   display: grid;
   grid-template-columns: 1fr auto;
+  gap: 10px;
   align-items: center;
   background-color: ${({ theme, $isCorrect }) =>
     theme.palette.common[$isCorrect ? 'white' : 'lightPink']};

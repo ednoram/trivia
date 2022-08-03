@@ -6,6 +6,7 @@ import { AnswerBlock } from '~/components';
 import { Paths } from '~/constants';
 import { useAppDispatch, useAppSelector } from '~/hooks';
 import { questionsActions, questionsSelectors } from '~/redux';
+import { StyledVector1, StyledVector2, StyledVector3, StyledVector4 } from '~/styles';
 import { getOneToNArray } from '~/utils';
 
 import * as S from './Results.styled';
@@ -43,7 +44,12 @@ const Results: React.FC = () => {
   }, [answers.length, navigate]);
 
   return (
-    <S.Container>
+    <>
+      <S.Background />
+      <StyledVector1 />
+      <StyledVector2 />
+      <StyledVector3 />
+      <StyledVector4 />
       <S.Content>
         <S.CloseIcon role="button" onClick={handlePlayAgainClick} />
         <S.Score>
@@ -59,7 +65,7 @@ const Results: React.FC = () => {
         <S.Answers>{answerBlocks}</S.Answers>
         <S.PlayAgain onClick={handlePlayAgainClick}>Play Again</S.PlayAgain>
       </S.Content>
-    </S.Container>
+    </>
   );
 };
 

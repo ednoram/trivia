@@ -7,7 +7,8 @@ export const coloredBackgroundStyles = css`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   overflow-y: auto;
   background-color: ${({ theme }) => theme.palette.primary.main};
 `;
@@ -19,8 +20,8 @@ export const pageContentStyles = css`
   align-items: center;
   padding: 100px 20px 150px;
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
-    padding: 80px 20px 120px;
+  @media (max-width: ${Breakpoints.TabletSmall}) {
+    padding: 80px 20px 100px;
   }
 `;
 

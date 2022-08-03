@@ -10,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
+    position: relative;
     font-family: "Quicksand";
   }
 

@@ -5,7 +5,7 @@ import { Button } from '~/components';
 import { Breakpoints } from '~/constants';
 import { coloredBackgroundStyles, gradientButtonStyles, pageContentStyles } from '~/styles';
 
-export const Container = styled.div`
+export const Background = styled.div`
   ${coloredBackgroundStyles}
 `;
 
@@ -47,6 +47,10 @@ export const Stars = styled.div<{ $totalCount: number }>`
   grid-template-columns: repeat(${({ $totalCount }) => Math.min($totalCount, 10)}, 1fr);
   gap: 10px 8px;
   margin-top: 28px;
+
+  @media (max-width: ${Breakpoints.TabletSmall}) {
+    grid-template-columns: repeat(${({ $totalCount }) => Math.min($totalCount, 5)}, 1fr);
+  }
 `;
 
 export const Star = styled(StarIcon)<{ $filled?: boolean }>`
@@ -86,7 +90,7 @@ export const CloseIcon = styled(XIcon)`
     fill: ${({ theme }) => theme.palette.primary.contrastText};
   }
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     top: 44px;
   }
 `;

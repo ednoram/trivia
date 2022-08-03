@@ -19,7 +19,12 @@ export const Title = styled.h1`
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.palette.primary.main};
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.Tablet}) {
+    max-width: 420px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     font-size: 32px;
     line-height: 44px;
   }
@@ -35,7 +40,7 @@ export const Level = styled.p`
   color: ${({ theme }) => theme.palette.primary.main};
   margin-top: 24px;
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     font-size: 16px;
     margin-top: 10px;
   }
@@ -46,7 +51,7 @@ export const Progress = styled.div`
   width: 100%;
   margin-top: 32px;
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     max-width: unset;
   }
 `;
@@ -84,7 +89,7 @@ export const Question = styled.p`
   color: ${({ theme }) => theme.palette.primary.main};
   margin: 60px 0 40px;
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     font-size: 22px;
     text-align: start;
     max-width: 70vw;
@@ -112,7 +117,7 @@ export const AnswerButton = styled.button<{ $inverted?: boolean }>`
       border: 2px solid ${({ theme }) => theme.palette.primary.main};
     `}
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     height: 60px;
     margin-top: 20px;
   }

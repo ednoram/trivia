@@ -37,7 +37,7 @@ export const PlayButton = styled(Button)`
   ${gradientButtonStyles}
   margin-top: 80px;
 
-  @media (max-width: ${Breakpoints.TabledSmall}) {
+  @media (max-width: ${Breakpoints.TabletSmall}) {
     margin-top: 60px;
   }
 `;
