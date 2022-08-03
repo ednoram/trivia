@@ -23,3 +23,22 @@ export const pageContentStyles = css`
     padding: 80px 20px 120px;
   }
 `;
+
+export const gradientButtonStyles = css`
+  max-width: 440px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 149.9%;
+  color: ${({ theme }) => theme.palette.common.white};
+  background: ${({ theme }) => theme.gradient};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightRed};
+  padding: 22px 32px;
+
+  :disabled {
+    color: ${({ theme }) => theme.palette.common.darkGray};
+    background: ${({ theme }) => theme.palette.common.white};
+    box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightGray};
+  }
+`;

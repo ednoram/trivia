@@ -1,3 +1,4 @@
+import { decode as decodeHTML } from 'html-entities';
 import React from 'react';
 
 import { CheckMarkIcon, XIcon } from '~/assets';
@@ -15,7 +16,7 @@ const AnswerBlock: React.FC<AnswerBlockProps> = ({ answer }) => {
 
   return (
     <S.Wrapper $isCorrect={isAnswerCorrect}>
-      <S.Question>{question.question}</S.Question>
+      <S.Question>{decodeHTML(question.question)}</S.Question>
       {isAnswerCorrect ? <CheckMarkIcon /> : <XIcon />}
     </S.Wrapper>
   );

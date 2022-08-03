@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { CoinIcon, TrophyIcon } from '~/assets';
 import { Button } from '~/components/shared';
 import { Breakpoints } from '~/constants';
+import { gradientButtonStyles } from '~/styles';
 
 export const Form = styled.form`
   max-width: 442px;
@@ -33,22 +34,8 @@ export const Coin = styled(CoinIcon)`
 `;
 
 export const PlayButton = styled(Button)`
-  width: 100%;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 149.9%;
-  color: ${({ theme }) => theme.palette.common.white};
-  background: ${({ theme }) => theme.gradient};
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightRed};
+  ${gradientButtonStyles}
   margin-top: 80px;
-  padding: 22px 32px;
-
-  :disabled {
-    color: ${({ theme }) => theme.palette.common.darkGray};
-    background: ${({ theme }) => theme.palette.common.white};
-    box-shadow: 0px 6px 0px ${({ theme }) => theme.palette.common.lightGray};
-  }
 
   @media (max-width: ${Breakpoints.TabledSmall}) {
     margin-top: 60px;
